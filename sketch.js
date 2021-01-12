@@ -11,7 +11,7 @@ var cup9, cup10, cup11, cup12, cup13, cup14, cup15, cup16;
 var ground;
 var backgroundImg;
 var stand, stand2, stand2Img;
-var slingshot;
+var slingshot, bgImg;
 var score = 0;
 var str = "Hello world!";
 var res = str.slice(3);
@@ -19,6 +19,7 @@ var res = str.slice(3);
 function preload(){
     getBackgroundImage();
     stand2Img = loadImage("stand2.png")
+	bgImg = loadimage("bg.png");
 }
 
 function setup() {
@@ -64,6 +65,8 @@ function setup() {
 function draw() {
   if(backgroundImg)
   background(backgroundImg);
+else{
+	background(bgImg)}
   textSize(30);
   fill("white")
   text("Score " + score, width-300, 50);
